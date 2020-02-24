@@ -1,0 +1,89 @@
+﻿@{
+    ViewData["Title"] = "编辑工作经历";
+}
+<style>
+    body {
+        background-color: #fff;
+    }
+
+    .weui-tab__panel {
+        padding: 10px;
+        background-color: #fff;
+    }
+</style>
+<form class="form">
+    <div class="page tabbar js_show">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-tab">
+
+                <div class="weui-tab__panel">
+
+                    <div class="weui_cells">
+                        <div class="weui-cell weui-cell_access">
+                            <div class="weui-cell__hd">起始日期</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请选择日期" id="BeginDate" pickertype="date" targetid="BeginDate">
+                            </div>
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell weui-cell_access">
+                            <div class="weui-cell__hd">截止日期</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请选择日期" id="EndDate" pickertype="date" targetid="EndDate">
+                            </div>
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">单位名称</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请选择单位名称">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">单位地址</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入地址">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">邮编</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入邮编">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">联系电话</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入联系电话">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">担任职务</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入担任职务">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">岗位描述</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入岗位描述">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-tabbar weui-tabbar-foot">
+                    <a href="/Info/WorkExperience/index" class="weui-tabbar__item weui-bar__item_on">
+                        <i class="fa fa-chevron-circle-left"></i>&nbsp;&nbsp;取消
+                    </a>
+                    <a href="/Info/WorkExperience/index" class="weui-tabbar__item weui-bar__item_on weui-btn_submit">
+                        保存
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+
+}

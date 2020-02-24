@@ -1,0 +1,750 @@
+﻿* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+    *:before,
+    *:after {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+html {
+    width: 100%;
+    height: 100%;
+    color: #666666;
+    font-size: 14px;
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    color: #666666;
+    font-size: 14px;
+    padding-bottom: 55px;
+    background-color: #f8f8f8;
+}
+
+ul, li {
+    list-style: none;
+    line-height: 27px;
+}
+
+a:-webkit-any-link {
+    color: #666666;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/*@supports (bottom: env(safe-area-inset-bottom)) {
+    .weui-tabbar {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}*/
+/*
+ ******************************************************************
+ ***********************WEUI样式优化与扩展**************************
+ ******************************************************************
+*/
+.container {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+    .container .weui-form {
+        padding: 10px 10px;
+        background-color: #FFF;
+    }
+
+.weui-panel:before {
+    border: 0px;
+}
+
+.weui-panel__hd {
+    color: #fff;
+    font-size: 14px;
+    padding: 8px 10px;
+    background-color: #45C0E5;
+}
+
+    .weui-panel__hd:after {
+        left: 0px;
+        border-bottom: 1px solid #CCCCCC;
+    }
+
+    .weui-panel__hd.settingborder {
+        color: #666666;
+        background-color: #FFF;
+    }
+
+.weui-panel__bd {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 10px;
+    position: relative;
+    display: inline-block;
+}
+
+    .weui-panel__bd .weui-cell:first-child {
+        padding-top: 0px;
+    }
+
+.weui-panel__ft {
+}
+
+.weui-cells {
+    font-size: 14px;
+    line-height: 2;
+}
+
+    .weui-cells:before {
+        z-index: 0;
+    }
+
+.weui-cell {
+    padding: 10px 10px;
+}
+
+    .weui-cell:before {
+        left: 0px;
+        z-index: 0;
+    }
+
+.weui-cell__ft {
+    color: #666666;
+}
+
+.weui-cell.no-border:before {
+    border-top: 0px;
+}
+
+.weui-cell-ul {
+    width: 100%;
+}
+
+    .weui-cell-ul li {
+        float: left;
+        width: 100%;
+        list-style: none;
+    }
+
+        .weui-cell-ul li label {
+            float: left;
+            min-width: 4em;
+            display: block;
+            text-align: justify;
+            text-align-last: justify;
+        }
+
+        .weui-cell-ul li span {
+            float: right;
+            max-width: 72%;
+            display: block;
+            overflow: hidden;
+            word-break: normal;
+            word-wrap: break-word;
+            text-align: right;
+            text-align-last: right;
+        }
+
+            .weui-cell-ul li span .lable_l {
+                text-align: left;
+                text-align-last: left;
+                width: 20%;
+            }
+
+            .weui-cell-ul li span .lable_r {
+                text-align: right;
+                width: 100%;
+                display: block;
+            }
+
+.weui-cell_access .weui-cell__ft:after {
+    /*top: 58%;*/
+    width: 8px;
+    height: 8px;
+}
+
+.weui-navbar__item {
+    cursor: pointer;
+}
+
+.weui-tabbar__item .weui-tabbar__label {
+    color: #666666;
+}
+
+.weui-tabbar__item.weui-bar__item_on .weui-tabbar__label {
+    color: #45C0E5;
+}
+
+.weui-flex__item {
+    line-height: 27px;
+}
+/*.weui-flex__item label {
+        display: inline-block;
+        min-width: 6em;
+        text-align: right;
+        text-align-last: right;
+    }
+
+    .weui-flex__item span {
+    }*/
+.weui-media-box:before {
+    left: 0px;
+    border: 0px;
+}
+
+.weui-media-box_appmsg .weui-media-box__hd {
+    width: 40px;
+    height: 40px;
+    line-height: 10px;
+    margin-right: 0px;
+}
+
+.weui-media-box__title {
+    color: #666666;
+}
+
+.weui-media-box__col {
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-inline-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.weui-media-box__cont {
+    word-wrap: break-word;
+    color: #999;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.weui-media-box__desc {
+    font-size: 14px;
+}
+
+.weui-loadmore {
+    height: 35px;
+    margin: 0 auto;
+    line-height: 35px;
+}
+
+.weui-btn_default {
+    background-color: #FFF;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+    color: #FFF;
+    background-color: orange;
+}
+
+.weui-tab__content_on {
+    display: block;
+}
+
+.weui-btn {
+    font-size: 14px;
+}
+    /*.weui-btn.msg {
+        position: relative;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 8px 24px;
+        box-sizing: border-box;
+        font-weight: 700;
+        font-size: 17px;
+        text-align: center;
+        text-decoration: none;
+        line-height: 1.4;
+        border-radius: 4px;
+        overflow: hidden;
+    }*/
+    .weui-btn:after {
+        border: 1px solid #45C0E5;
+    }
+
+.weui-btn_medium {
+    width: 50%;
+    font-size: 14px;
+}
+
+.weui-btn_primary {
+    background-color: #45C0E5;
+}
+
+    .weui-btn_primary:not(.weui-btn_disabled):active {
+        background-color: #45C0E5;
+    }
+
+.weui-btn_cell {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    font-weight: 700;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    background-color: #45C0E5;
+}
+
+.weui-btn_cell__icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin: -.2em .34em 0 0;
+}
+
+.weui-btn_cell-default {
+    color: rgba(0,0,0,.9);
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.weui-btn_cell-fff {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    background-color: #FFF;
+    color: #45C0E5 !important;
+    font-weight: 500;
+}
+
+.weui-msg {
+    padding-top: 30%;
+}
+
+.weui-icon_msg {
+    font-size: 60px;
+}
+
+.weui-msg__title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.weui-loading_toast {
+    /*z-index:999;*/
+}
+/*
+ ******************************************************************
+ ***********************自定义扩展样式******************************
+ ******************************************************************
+*/
+.P_0 {
+    padding: 0px;
+}
+
+.P_10 {
+    padding: 10px;
+}
+
+.P_TB_10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.P_LR_10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.M_0 {
+    margin: 0px;
+}
+
+.M_L_0 {
+    margin: 10px 10px 10px 0px;
+}
+
+.M_R_0 {
+    margin: 10px 0px 10px 10px;
+}
+
+.M_TB_10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.M_LR_10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.L_0 {
+    left: 0px;
+}
+
+.R_0 {
+    right: 0px;
+}
+
+.color_def {
+    color: #666666;
+}
+
+.color_blk {
+    color: #000;
+}
+
+.color_fff {
+    color: #FFF;
+}
+
+.color_45c0e5 {
+    color: #45C0E5;
+}
+
+.color_07c160 {
+    color: #07C160;
+}
+
+.border-color-def {
+}
+
+.backgroud_color_fff {
+    background-color: #e8b259;
+}
+
+.backgroud_color_07c160 {
+    background-color: #07c160; /*09bb07*/
+}
+
+.text_left {
+    text-align: left;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_right {
+    text-align: right;
+}
+
+.font_size_10 {
+    font-size: 10px;
+}
+
+.radius-shadow {
+    border-radius: 6px;
+    box-shadow: 3px 3px 2px #cccccc;
+}
+
+.panel {
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #666666;
+}
+
+.form .form-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.form .weui-title {
+    margin-bottom: 0;
+    padding-left: 0;
+    margin-top: .77em;
+    padding-right: 15px;
+    color: #999;
+}
+
+.form .weui-cell {
+    padding: 15px 0;
+    border-bottom:1px solid #eee;
+}
+    .form .weui-cell .weui-cell__hd {
+        width: 80px;
+    }
+    .form .weui-cell .weui-cell__bd input {
+        text-align: right;
+    }
+
+    .form .weui-cell a {
+        padding: 0px;
+    }
+
+    .form .weui-cell:before {
+        border-top: 0;
+    }
+
+.form .weui-cells {
+    margin-top: 0;
+}
+
+    .form .weui-cells:before {
+        border-top: 0;
+    }
+
+.form select {
+    border: 0;
+    background: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    height: initial;
+    line-height: initial;
+    padding-left: 0;
+    color: #888;
+    z-index: -1;
+    width: 100%
+}
+
+.form .weui-cell_select .weui-cell__bd:after {
+    right: 2px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #888;
+    font-size: 16px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 13px;
+}
+
+input:-moz-placeholder, textarea:-moz-placeholder {
+    color: #888;
+    font-size: 16px;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #888;
+    font-size: 16px;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #888;
+    font-size: 16px;
+}
+
+select:focus {
+    border: 4px solid #ff0000;
+}
+
+.field-validation-error {
+    color: #ff0000;
+}
+
+.bg-model {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: none;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1110
+}
+
+.picker-contnet {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1111;
+    background-color: #fff;
+    max-height: 50%;
+    overflow: scroll;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.material-file-name {
+    max-width: -moz-calc(100% - 50px);
+    max-width: -webkit-calc(100% - 50px);
+    max-width: calc(100% - 50px);
+    font-size: 15px;
+}
+
+.material-file-ext {
+    width: 50px;
+    font-size: 15px;
+}
+
+.material-file-type {
+    width: 50%;
+    font-size: 17px;
+    display: inline-block;
+}
+
+.material-check-approve {
+    width: 45%;
+    color: #1ab394;
+    font-size: 14px;
+    text-align: right;
+    display: inline-block;
+}
+
+.material-check-ing {
+    width: 45%;
+    color: #f8ac59;
+    font-size: 14px;
+    text-align: right;
+    display: inline-block;
+}
+
+.material-check-unapprove {
+    width: 45%;
+    color: #ed5565;
+    font-size: 14px;
+    text-align: right;
+    display: inline-block;
+}
+
+.link {
+    color: #145fe6 !important;
+}
+
+.pay-success {
+    background: url(/img/success.svg) no-repeat center 50%;
+    padding-top: 140px;
+    text-align: center;
+}
+
+.pay-error {
+    background: url(/img/error.svg) no-repeat center 50%;
+    padding-top: 140px;
+    text-align: center;
+}
+/*时间轴扩展样式*/
+.VivaTimeline .pos-right .circ-current, .VivaTimeline .pos-left .circ-current {
+    box-shadow: 0px 0px 8px #5bc0de;
+    background-color: #5bc0de;
+    animation: mymove 1s ease-in-out infinite alternate;
+    -webkit-animation: mymove 1s ease-in-out infinite alternate; /*Safari and Chrome*/
+}
+
+.VivaTimeline dd::before, .VivaTimeline dd::after {
+    display: table;
+    content: " ";
+}
+
+.VivaTimeline dd::after {
+    clear: both;
+}
+/*font awesome*/
+.fa-fw {
+    width: 0.8em;
+    /*color:#c8c8cd;*/
+    font-size: 16px;
+}
+/*回到顶部样式*/
+.back_to_top {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 999;
+    display: none;
+}
+/*首页样式*/
+.div_report {
+    background-color: #FFF;
+    height: auto;
+    margin: 10px 10px 0px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.div_report_button {
+    margin: 0 10px;
+    border-top: 1px solid #F8F8F8;
+    height: 50px;
+    line-height: 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.notice_title_content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFF;
+}
+
+    .notice_title_content:after {
+        content: " ";
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        color: #CCC;
+        padding-left: 20px;
+        background: -webkit-linear-gradient(left, transparent, #fff 55%);
+        background: -o-linear-gradient(right, transparent, #fff 55%);
+        background: -moz-linear-gradient(right, transparent, #fff 55%);
+        background: linear-gradient(to right, transparent, #fff 55%);
+    }
+/*
+ ******************************************************************
+ ***********************VUE优化相关样式*****************************
+ ******************************************************************
+*/
+[v-cloak] {
+    display: none;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+    .wrapper .line {
+        display: inline-block;
+        border: 0.4px solid #ddd;
+        vertical-align: middle;
+        width: 100%;
+    }
+
+    .wrapper .content {
+        color: #ccc;
+        font-size: 14px;
+    }
+
+.weui-tabbar-foot {
+    height: 50px;
+    line-height: 50px;
+}
+
+    .weui-tabbar-foot a {
+        font-size: 18px;
+        padding-top: 0px;
+    }
+/*.weui-animate-fade-in {
+    -webkit-animation: initial;
+    animation: initial;
+}*/

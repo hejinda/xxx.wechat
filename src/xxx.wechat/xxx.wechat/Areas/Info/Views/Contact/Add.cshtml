@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "新增紧急联系人";
+}
+<style>
+    body {
+        background-color: #fff;
+    }
+
+    .weui-tab__panel {
+        padding: 10px;
+        background-color: #fff;
+    }
+</style>
+<form class="form">
+    <div class="page tabbar js_show">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-tab">
+
+                <div class="weui-tab__panel">
+
+                    <div class="weui_cells">
+                        <div class="weui-cell weui-cell_access" id="Relation_Select">
+                            <div class="weui-cell__hd">与本人关系</div>
+                            <div class="weui-cell__bd">
+                                <input id="Relation_Show" class="weui-input" placeholder="请选择">
+                                <input id="Relation" type="hidden">
+                            </div>
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">姓名</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入姓名">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">生日</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请选择生日" id="Birthday" pickertype="date" targetid="Birthday">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">手机</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入手机">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">邮箱</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入邮箱">
+                            </div>
+                        </div>
+                        <div class="weui-cell  weui-cell_access" id="selectAddress" style="padding-bottom: 0;border-bottom: 0;">
+                            <div class="weui-cell__hd">联系地址</div>
+                            <div class="weui-cell__bd">
+                                <input id="Address_Show" class="weui-input" placeholder="请选择地区">
+                                <input id="Address_Province" type="hidden">
+                                <input id="Address_City" type="hidden">
+                                <input id="Address_District" type="hidden"><br />
+                            </div>
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell" style="padding-top: 4px;">
+                            <div class="weui-cell__bd">
+                                <input id="Address_Address" style="text-align:left" class="weui-input" placeholder="请输入详细地址">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-tabbar weui-tabbar-foot">
+                    <a href="/Info/Contact/index" class="weui-tabbar__item weui-bar__item_on">
+                        <i class="fa fa-chevron-circle-left"></i>&nbsp;&nbsp;取消
+                    </a>
+                    <a href="/Info/Contact/index" class="weui-tabbar__item weui-bar__item_on weui-btn_submit">
+                        保存
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script src="~/js/city.js"></script>
+    <script src="~/js/data.js"></script>
+    <script>
+        $('#Relation_Select').on('click', function () {
+            weui.picker(
+                relations,
+                {
+                    onConfirm: function (result) {
+                        $("#Relation_Show").val(result[0].label);
+                        $("#Relation").val(result[0].value);
+                    },
+                    title: '选择关系'
+                }
+            );
+        });
+
+        $('#selectAddress').on('click', function () {
+            weui.picker(
+                cityData,
+                {
+                    onConfirm: function (result) {
+                        $("#Address_Show").val(result);
+                        $("#Address_Province").val(result[0].value);
+                        $("#Address_City").val(result[1].value);
+                        $("#Address_District").val(result[2].value);
+                    },
+                    title: '选择地区'
+                }
+            );
+        });
+    </script>
+}

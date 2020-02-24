@@ -1,0 +1,188 @@
+﻿
+<style>
+
+    .weui-cell:before {
+        border-top: 0px;
+    }
+
+    .panel {
+        padding-top: 10px;
+    }
+
+    .weui-cell {
+        padding: 0 10px 10px 10px;
+    }
+
+    .weui-cell_access {
+        width: 100%;
+        padding-top: 0px;
+    }
+
+    .weui-btn {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .file-title {
+        font-size: 18px;
+        color: #aaa;
+    }
+
+    .weui-uploader__input-box:after, .weui-uploader__input-box:before {
+        content: ""
+    }
+
+</style>
+<div class="page tabbar js_show">
+    <div class="page__bd" style="height: 100%;">
+        <div class="weui-tab">
+            <div class="weui-tab__panel">
+                <!--待上传 Start-->
+                <div class="panel margin-bottom-10 ">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <span class="file-title">
+                                个人简历
+                            </span>
+                        </div>
+                        <div class="weui-cell__ft">
+                            待上传
+                        </div>
+                    </div>
+                    <div class="weui-flex" style="border-top: 1px solid #ddd;">
+                        <div class="weui-flex__item" style="line-height: 45px;text-align: center;    border-right: 1px solid #ddd;">
+                            <a class="a-default" href="javascript:void(0);" onclick="openExample(1);">查看范例</a>
+                        </div>
+                        <div class="weui-flex__item" style="line-height: 45px;text-align: center;">
+                            <div style="position: relative;color:#3198DA;">
+                                <i class="fa fa-upload"></i>&nbsp;点我上传
+                                <input id="uploaderInput" class="weui-uploader__input" type="file" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--待上传 End-->
+                <!--审核中 Start-->
+                <div class="panel margin-bottom-10 ">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <span class="file-title">
+                                个人简历
+                            </span>
+
+                        </div>
+                        <div class="weui-cell__ft">
+                            审核中
+                        </div>
+                    </div>
+                    <div class="weui-cell">
+                        <a class="weui-cell weui-cell_access" style="padding:0px;">
+                            <div class="weui-cell__bd" style="word-break: break-all;">
+                                hejinda.doc
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="weui-flex" style="    border-top: 1px solid #ddd;">
+                        <div class="weui-flex__item" style="line-height: 45px;text-align: center;    border-right: 1px solid #ddd;">
+                            <a class="a-default" href="javascript:void(0);" onclick="openExample(1);">查看范例</a>
+                        </div>
+                        <div class="weui-flex__item" style="line-height: 45px;text-align: center;">
+                            <div style="position: relative;color:#3198DA;">
+                                <i class="fa fa-upload"></i>&nbsp;重新上传
+                                <input id="uploaderInput" class="weui-uploader__input" type="file" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--审核中 End-->
+                <!--审核通过 Start-->
+                <div class="panel margin-bottom-10 ">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <span class="file-title">
+                                个人简历
+                            </span>
+
+                        </div>
+                        <div class="weui-cell__ft">
+                            <span style="color:#1ab394;">审核通过</span>
+                        </div>
+                    </div>
+                    <div class="weui-cell">
+                        <a class="weui-cell weui-cell_access" style="padding:0px;">
+                            <div class="weui-cell__bd" style="word-break: break-all;">
+                                hejinda.doc
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--审核通过 End-->
+                <!--审核不通过 Start-->
+                <div class="panel margin-bottom-10 ">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <span class="file-title">
+                                个人简历
+                            </span>
+                        </div>
+                        <div class="weui-cell__ft" style="color:#f00;">
+                            审核未通过
+                        </div>
+                    </div>
+                    <div class="weui-cell">
+                        <a class="weui-cell weui-cell_access" style="padding:0px;" >
+                            <div class="weui-cell__bd" style="word-break: break-all;">
+                                hejinda.doc
+                            </div>
+                            <div class="weui-cell__ft">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            未通过原因
+                            ：信息填写不完整信息填写不完整信息填写不完整信息填写不完整信息填写不完整信息填写不完整信息填写不完整
+                        </div>
+                    </div>
+                    <div class="weui-flex" style="    border-top: 1px solid #ddd;">
+                            <div class="weui-flex__item" style="line-height: 45px;text-align: center;    border-right: 1px solid #ddd;">
+                                <a class="a-default" href="javascript:void(0);" onclick="openExample(1);">查看范例</a>
+                            </div>
+                        <div class="weui-flex__item" style="line-height: 45px;text-align: center;">
+                            <div style="position: relative;color:#3198DA;">
+                                <i class="fa fa-upload"></i>&nbsp;重新上传
+                                <input id="uploaderInput" class="weui-uploader__input" type="file" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--审核不通过 End-->
+            </div>
+            <div class="weui-tabbar weui-tabbar-foot">
+                <a href="/Home/index" class="weui-tabbar__item weui-bar__item_on">
+                    <i class="fa fa-chevron-circle-left"></i>&nbsp;&nbsp;返回
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<template id="tempExample" pickertype="default" pickerid="panelExample">
+</template>
+<div id="panelExample" class="picker-contnet" style="max-height:75%;word-break: break-all;">
+
+</div>
+
+@section Scripts{
+    <script>
+        function openExample(id) {
+            //动态取范例内容，填充展示
+            $("#panelExample").html("动态取范例内容，填充展示");
+            $("#tempExample").click();
+        }
+    </script>
+}

@@ -1,0 +1,216 @@
+﻿@{
+    ViewData["Title"] = "工作经历";
+}
+
+<style>
+    .weui-cell__bd {
+        text-align: right;
+    }
+
+    .weui-tab__panel {
+        background-color: #fff;
+    }
+
+    .weui-panel:after {
+        border: 0px;
+    }
+</style>
+<div class="page tabbar js_show">
+    <div class="page__bd" style="height: 100%;">
+        <div class="weui-tab">
+            <div class="weui-tab__panel">
+                <div class="weui-panel" style="margin-top:0px;">
+                    <div class="weui-panel__hd">
+                        <div class="weui-cell P_0">
+                            <div class="weui-cell__hd">工作经历</div>
+                            <div class="weui-cell__bd">
+                                <a class="weui-cell__ft color_fff" href="/info/WorkExperience/Add"><i class="fa fa-edit fa-fw"></i>&nbsp;新增</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-flex wrapper"><div class="weui-flex__item"><span class="line"></span></div> <div class="weui-flex__item content">工作经历1</div> <div class="weui-flex__item"><span class="line"></span></div></div>
+                    <div class="weui-panel__bd form" style="margin-bottom: 20px;">
+
+                        <div class="weui_cells">
+
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">开始日期</div>
+                                <div class="weui-cell__bd">
+                                    2019-01-01
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">结束日期</div>
+                                <div class="weui-cell__bd">
+                                    2020-01-01
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">单位名称</div>
+                                <div class="weui-cell__bd">
+                                    神盾局
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">单位地址</div>
+                                <div class="weui-cell__bd">
+                                    峨山路110号120弄119室
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">邮编</div>
+                                <div class="weui-cell__bd">
+                                    119
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">联系电话</div>
+                                <div class="weui-cell__bd">
+                                    110
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">担任职务</div>
+                                <div class="weui-cell__bd">
+                                    董事长
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">岗位描述</div>
+                                <div class="weui-cell__bd">
+                                    喝茶看新闻
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item M_L_0">
+                                <a href="/Info/WorkExperience/Edit" class="weui-btn weui-btn_default btn-getVCode color_45c0e5"><i class="fa fa-edit fa-fw"></i>&nbsp;编辑</a>
+
+                            </div>
+                            <div class="weui-flex__item M_R_0">
+                                <a onclick="Delete()" class="weui-btn weui-btn_default btn-getVCode color_45c0e5"><i class="fa fa-trash-o fa-fw"></i>&nbsp;删除</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-flex wrapper"><div class="weui-flex__item"><span class="line"></span></div> <div class="weui-flex__item content">语言能力2</div> <div class="weui-flex__item"><span class="line"></span></div></div>
+                    <div class="weui-panel__bd form" style="margin-bottom: 20px;">
+
+                        <div class="weui_cells">
+
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">开始日期</div>
+                                <div class="weui-cell__bd">
+                                    2019-01-01
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">结束日期</div>
+                                <div class="weui-cell__bd">
+                                    2020-01-01
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">单位名称</div>
+                                <div class="weui-cell__bd">
+                                    神盾局
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">单位地址</div>
+                                <div class="weui-cell__bd">
+                                    峨山路110号120弄119室
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">邮编</div>
+                                <div class="weui-cell__bd">
+                                    119
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">联系电话</div>
+                                <div class="weui-cell__bd">
+                                    110
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">担任职务</div>
+                                <div class="weui-cell__bd">
+                                    董事长
+                                </div>
+                            </div>
+                            <div class="weui-cell">
+                                <div class="weui-cell__hd">岗位描述</div>
+                                <div class="weui-cell__bd">
+                                    喝茶看新闻
+                                </div>
+                            </div>
+                        </div>
+                        <div class="weui-flex">
+                            <div class="weui-flex__item M_L_0">
+                                <a href="/Info/WorkExperience/Edit" class="weui-btn weui-btn_default btn-getVCode color_45c0e5"><i class="fa fa-edit fa-fw"></i>&nbsp;编辑</a>
+
+                            </div>
+                            <div class="weui-flex__item M_R_0">
+                                <a onclick="Delete()" class="weui-btn weui-btn_default btn-getVCode color_45c0e5"><i class="fa fa-trash-o fa-fw"></i>&nbsp;删除</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="weui-tabbar weui-tabbar-foot">
+                <a href="/Info/index/index" class="weui-tabbar__item weui-bar__item_on">
+                    <i class="fa fa-chevron-circle-left"></i>&nbsp;&nbsp;返回
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--BEGIN dialog1-->
+<div class="js_dialog" id="dialog_delete" style="display: none;" data-sourceId="0">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="weui-dialog__hd"><strong class="weui-dialog__title">系统提示</strong></div>
+        <div class="weui-dialog__bd">确定删除？</div>
+        <div class="weui-dialog__ft">
+            <a href="javascript:void(0);" onclick="DeleteCancel()" class="weui-dialog__btn weui-dialog__btn_default">取消</a>
+            <a href="javascript:void(0);" onclick="DeleteConfirm()" class="weui-dialog__btn weui-dialog__btn_warn" style="color:#E64340;">确认</a>
+        </div>
+    </div>
+</div>
+<!--END dialog1-->
+
+@section Scripts{
+    <script>
+        function Delete(id) {
+            $('#dialog_delete').fadeIn(200);
+        }
+        function DeleteCancel() {
+            $('#dialog_delete').fadeOut(200);
+        }
+        function DeleteConfirm() {
+            $('#dialog_delete').fadeOut(200);
+            //$.loading();
+            //$.ajax({
+            //    url: '',
+            //    type: 'post',
+            //    async: false,
+            //    data: { id: pkId },
+            //    success: function (data) {
+            //        $.loadingclose();
+            //        if (data && data == true) {
+            //            $.operateSuccess();
+            //            window.location.href = window.location.href;
+            //        }
+            //    }
+            //})
+            $.operateSuccess();
+            window.location.href = window.location.href;
+        }
+    </script>
+}

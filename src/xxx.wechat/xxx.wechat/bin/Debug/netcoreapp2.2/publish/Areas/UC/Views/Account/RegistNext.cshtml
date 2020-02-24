@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "注册 - 填写信息";
+}
+<style>
+    body {
+        background-color: #fff;
+    }
+</style>
+<form class="form">
+
+    <div class="weui_cells">
+        <div class="weui-title">手机号（作为登录账号）</div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                手机号
+            </div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" placeholder="请输入手机号">
+            </div>
+        </div>
+
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd">姓名</div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" autocomplete="off" placeholder="请输入姓名">
+            </div>
+        </div>
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd">密码</div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" autocomplete="off" placeholder="请输入密码">
+            </div>
+        </div>
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd">确认密码</div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" autocomplete="off" placeholder="请再次输入密码">
+            </div>
+        </div>
+        <div class="weui-cell">
+            <div class="weui-cell__hd">邀请码</div>
+            <div class="weui-cell__bd">
+                <input class="weui-input" autocomplete="off" placeholder="请输入邀请码">
+            </div>
+        </div>
+    </div>
+    <div class="P_TB_10">
+        <button class="weui-btn weui-btn_primary" type="button" onclick="success()">完成注册</button>
+    </div>
+
+</form>
+<script>
+    function success() {
+        $.operateSuccess();
+        setTimeout(function () {
+            window.location = "uc/account/registresult";
+        }, 800);
+    }
+
+</script>

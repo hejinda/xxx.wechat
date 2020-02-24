@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "新增教育背景";
+}
+<style>
+    body {
+        background-color: #fff;
+    }
+
+    .weui-tab__panel {
+        padding: 10px;
+        background-color: #fff;
+    }
+</style>
+<form class="form">
+    <div class="page tabbar js_show">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-tab">
+
+                <div class="weui-tab__panel">
+
+                    <div class="weui_cells">
+
+                        <div class="weui-cell weui-cell_access" id="Country_Select">
+                            <div class="weui-cell__hd">国家</div>
+                            <div class="weui-cell__bd">
+                                <input id="Country_Show" class="weui-input" placeholder="请选择国家">
+                                <input id="Country" type="hidden">
+                            </div>
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell weui-cell_access" id="EduLevel_Select">
+                            <div class="weui-cell__hd">学历阶段</div>
+                            <div class="weui-cell__bd">
+                                <input id="EduLevel_Show" class="weui-input" placeholder="请选择学历">
+                                <input id="EduLevel" type="hidden">
+                            </div>
+
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">学校名称</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入学校名称">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">在读年级</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入在读年级/已毕业">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">专业名称</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入专业名称">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">在校成绩（均分或GPA）</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入在校成绩">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">起止时间</div>
+                            <div class="weui-cell__bd" style="text-align:right;">
+                                <input class="weui-input" style="width:100px;text-align:center;" type="text" id="BeginDate" pickertype="date" targetid="BeginDate" placeholder="起始日期" readonly="readonly" />
+                                -
+                                <input class="weui-input" style="width:100px;text-align:center;" type="text" id="EndDate" pickertype="date" targetid="EndDate" placeholder="终止日期" readonly="readonly" />
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">备注</div>
+                            <div class="weui-cell__bd"><input class="weui-input" placeholder="请输入备注"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-tabbar weui-tabbar-foot">
+                    <a href="/Info/EduBackground/index" class="weui-tabbar__item weui-bar__item_on">
+                        <i class="fa fa-chevron-circle-left"></i>&nbsp;&nbsp;取消
+                    </a>
+                    <a href="/Info/EduBackground/index" class="weui-tabbar__item weui-bar__item_on weui-btn_submit">
+                        保存
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script src="~/js/data.js"></script>
+    <script>
+        $('#Country_Select').on('click', function () {
+            weui.picker(
+                countrys,
+                {
+                    onConfirm: function (result) {
+                        $("#Country_Show").val(result[0].label);
+                        $("#Country").val(result[0].value);
+                    },
+                    title: '选择国际'
+                }
+            );
+        });
+        $('#EduLevel_Select').on('click', function () {
+            weui.picker(
+                eduLevel,
+                {
+                    onConfirm: function (result) {
+                        $("#EduLevel_Show").val(result[0].label);
+                        $("#EduLevel").val(result[0].value);
+                    },
+                    title: '选择学历'
+                }
+            );
+        });
+    </script>
+}

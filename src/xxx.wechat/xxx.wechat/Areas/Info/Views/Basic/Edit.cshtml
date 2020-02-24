@@ -1,0 +1,178 @@
+﻿@{
+    ViewData["Title"] = "编辑基本信息";
+}
+<style>
+    body {
+        background-color: #fff;
+    }
+
+    .weui-tab__panel {
+        padding: 10px;
+        background-color: #fff;
+    }
+</style><form class="form">
+    <div class="page tabbar js_show">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-tab">
+
+                <div class="weui-tab__panel">
+
+                    <div class="weui_cells">
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">姓名</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入姓名">
+                            </div>
+                        </div>
+                        <div class="weui-cell weui-cell_access" pickertype="date" targetid="Birthday">
+                            <div class="weui-cell__hd">出生日期</div>
+                            <div class="weui-cell__bd">
+                                <input id="Birthday" class="weui-input" placeholder="请选择出生日期" value="1991-6-9">
+                            </div>
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell weui-cell_access" id="selectSex">
+                            <div class="weui-cell__hd">性别</div>
+                            <div class="weui-cell__bd">
+                                <input id="Sex_Show" class="weui-input" placeholder="请选择性别">
+                                <input id="Sex" type="hidden">
+                            </div>
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">手机号</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入手机号">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">邮箱</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入邮箱">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">家庭电话</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入家庭电话">
+                            </div>
+                        </div>
+                        <div class="weui-cell  weui-cell_access" id="selectFAddress" style="padding-bottom: 0;border-bottom: 0;">
+                            <div class="weui-cell__hd">家庭地址</div>
+                            <div class="weui-cell__bd">
+                                <input id="FAddress_Show" class="weui-input" placeholder="请选择地区">
+                                <input id="FAddress_Province" type="hidden">
+                                <input id="FAddress_City" type="hidden">
+                                <input id="FAddress_District" type="hidden"><br />
+                            </div>
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell" style="padding-top: 4px;">
+                            <div class="weui-cell__bd">
+                                <input id="FAddress_Address" style="text-align:left" class="weui-input" placeholder="请输入详细地址">
+                            </div>
+                        </div>
+                        <div class="weui-cell  weui-cell_access" id="selectLAddress" style="padding-bottom: 0;border-bottom: 0;">
+                            <div class="weui-cell__hd">联系地址</div>
+                            <div class="weui-cell__bd">
+                                <input id="LAddress_Show" class="weui-input" placeholder="请选择地区">
+                                <input id="LAddress_Province" type="hidden">
+                                <input id="LAddress_City" type="hidden">
+                                <input id="LAddress_District" type="hidden"><br />
+                            </div>
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell" style="padding-top: 4px;">
+                            <div class="weui-cell__bd">
+                                <input id="FAddress_Address" style="text-align:left" class="weui-input" placeholder="请输入详细地址">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">邮编</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入家庭电话">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">护照号</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入家庭电话">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">护照有效期</div>
+                            <div class="weui-cell__bd" style="text-align:right;">
+                                <input class="weui-input" style="width:100px;text-align:center;" type="text" id="PassportBeginDate" pickertype="date" targetid="PassportBeginDate" placeholder="起始日期" readonly="readonly" />
+                                -
+                                <input class="weui-input" style="width:100px;text-align:center;" type="text" id="PassportEndDate" pickertype="date" targetid="PassportEndDate" placeholder="终止日期" readonly="readonly" />
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="weui-tabbar weui-tabbar-foot">
+                    <a href="/Info/Basic/index" class="weui-tabbar__item weui-bar__item_on">
+                        <i class="fa fa-chevron-circle-left"></i>&nbsp;&nbsp;取消
+                    </a>
+                    <a href="/Info/Basic/index" class="weui-tabbar__item weui-bar__item_on weui-btn_submit">
+                        保存
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script src="~/js/city.js"></script>
+    <script>
+        $('#selectSex').on('click', function () {
+            weui.picker(
+                [{
+                    label: '女',
+                    value: 0
+                }, {
+                    label: '男',
+                    value: 1
+                }],
+                {
+                    onConfirm: function (result) {
+                        $("#Sex_Show").val(result[0].label);
+                        $("#Sex").val(result[0].value);
+                    },
+                    title: '选择性别'
+                }
+            );
+        });
+
+        $('#selectFAddress').on('click', function () {
+            weui.picker(
+                cityData,
+                {
+                    onConfirm: function (result) {
+                        $("#FAddress_Show").val(result);
+                        $("#FAddress_Province").val(result[0].value);
+                        $("#FAddress_City").val(result[1].value);
+                        $("#FAddress_District").val(result[2].value);
+                    },
+                    title: '选择地区'
+                }
+            );
+        });
+        $('#selectLAddress').on('click', function () {
+            weui.picker(
+                cityData,
+                {
+                    onConfirm: function (result) {
+                        $("#LAddress_Show").val(result);
+                        $("#LAddress_Province").val(result[0].value);
+                        $("#LAddress_City").val(result[1].value);
+                        $("#LAddress_District").val(result[2].value);
+                    },
+                    title: '选择地区'
+                }
+            );
+        });
+    </script>
+}

@@ -1,0 +1,11 @@
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\bin\Debug\netcoreapp2.2\xxx.wechat.deps.json
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\bin\Debug\netcoreapp2.2\xxx.wechat.runtimeconfig.json
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\bin\Debug\netcoreapp2.2\xxx.wechat.runtimeconfig.dev.json
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\bin\Debug\netcoreapp2.2\xxx.wechat.dll
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\bin\Debug\netcoreapp2.2\xxx.wechat.pdb
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\obj\Debug\netcoreapp2.2\xxx.wechat.csproj.CoreCompileInputs.cache
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\obj\Debug\netcoreapp2.2\xxx.wechat.AssemblyInfoInputs.cache
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\obj\Debug\netcoreapp2.2\xxx.wechat.AssemblyInfo.cs
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\obj\Debug\netcoreapp2.2\xxx.wechat.dll
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\obj\Debug\netcoreapp2.2\xxx.wechat.pdb
+E:\个人\项目\创业\微信服务号\source code\xxx.wechat\src\xxx.wechat\xxx.wechat\obj\Debug\netcoreapp2.2\xxx.wechat.csprojAssemblyReference.cache

@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "新增语言能力";
+}
+<style>
+    body {
+        background-color: #fff;
+    }
+
+    .weui-tab__panel {
+        padding: 10px;
+        background-color: #fff;
+    }
+</style>
+<form class="form">
+    <div class="page tabbar js_show">
+        <div class="page__bd" style="height: 100%;">
+            <div class="weui-tab">
+
+                <div class="weui-tab__panel">
+
+                    <div class="weui_cells">
+                        <div class="weui-cell weui-cell_access" id="Type_Select">
+                            <div class="weui-cell__hd">语言类型</div>
+                            <div class="weui-cell__bd">
+                                <input id="Type_Show" class="weui-input" placeholder="请选择">
+                                <input id="Type" type="hidden">
+                            </div>
+                            <div class="weui-cell__ft"></div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">用户名</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入用户名">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">考试日期</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请选择日期" id="ExamDate" pickertype="date" targetid="ExamDate">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">总分</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入总分">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">听</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入分数">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">说</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入分数">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">读</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入分数">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">写</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入分数">
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__hd">Ref No</div>
+                            <div class="weui-cell__bd">
+                                <input class="weui-input" placeholder="请输入Ref No">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-tabbar weui-tabbar-foot">
+                    <a href="/Info/Language/index" class="weui-tabbar__item weui-bar__item_on">
+                        <i class="fa fa-chevron-circle-left"></i>&nbsp;&nbsp;取消
+                    </a>
+                    <a href="/Info/Language/index" class="weui-tabbar__item weui-bar__item_on weui-btn_submit">
+                        保存
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    <script src="~/js/data.js"></script>
+    <script>
+        $('#Type_Select').on('click', function () {
+            weui.picker(
+                languageType,
+                {
+                    onConfirm: function (result) {
+                        $("#Type_Show").val(result[0].label);
+                        $("#Type").val(result[0].value);
+                    },
+                    title: '选择类型'
+                }
+            );
+        });
+
+    </script>
+}
